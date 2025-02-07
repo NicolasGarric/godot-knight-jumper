@@ -105,7 +105,7 @@ script = ExtResource("1_pfbus")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6queq")
 autoplay = "default"
-frame_progress = 0.365739
+frame_progress = 0.45002
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_i00et")
