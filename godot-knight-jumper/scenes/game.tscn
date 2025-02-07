@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://cc6yfxa71ecl5"]
+[gd_scene load_steps=13 format=3 uid="uid://cc6yfxa71ecl5"]
 
 [ext_resource type="Texture2D" uid="uid://dqxhxieu6loy0" path="res://assets/sprites/world_tileset.png" id="1_ag6ng"]
 [ext_resource type="PackedScene" uid="uid://bfcmxyfps6aqx" path="res://scenes/player.tscn" id="1_pewfk"]
 [ext_resource type="PackedScene" uid="uid://d2gp3lb4jdnp4" path="res://scenes/platform.tscn" id="3_5hfyl"]
+[ext_resource type="PackedScene" uid="uid://c2lje47tybwvc" path="res://scenes/coin.tscn" id="4_tvrc1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljktv"]
 texture = ExtResource("1_ag6ng")
@@ -281,3 +282,45 @@ libraries = {
 "": SubResource("AnimationLibrary_3qbru")
 }
 autoplay = "move"
+
+[node name="coin" parent="." instance=ExtResource("4_tvrc1")]
+position = Vector2(-17, -56)
+
+[node name="coin2" parent="." instance=ExtResource("4_tvrc1")]
+position = Vector2(39, -56)
+
+[node name="coin3" parent="." instance=ExtResource("4_tvrc1")]
+position = Vector2(175, -41)
+
+[node name="coin4" parent="." instance=ExtResource("4_tvrc1")]
+position = Vector2(164, -153)
+
+[node name="coin5" parent="." instance=ExtResource("4_tvrc1")]
+position = Vector2(-72, -236)
+
+[node name="coin6" parent="." instance=ExtResource("4_tvrc1")]
+position = Vector2(-200, -300)
+
+[node name="coin7" parent="." instance=ExtResource("4_tvrc1")]
+position = Vector2(-40, -394)
+
+[node name="coin8" parent="." instance=ExtResource("4_tvrc1")]
+position = Vector2(-24, -394)
+
+[node name="coin9" parent="." instance=ExtResource("4_tvrc1")]
+position = Vector2(-7, -394)
+
+[node name="coin10" parent="." instance=ExtResource("4_tvrc1")]
+position = Vector2(8, -394)
+
+[node name="coin11" parent="." instance=ExtResource("4_tvrc1")]
+position = Vector2(24, -394)
+
+[node name="coin12" parent="." instance=ExtResource("4_tvrc1")]
+position = Vector2(39, -394)
+
+[node name="coin13" parent="." instance=ExtResource("4_tvrc1")]
+position = Vector2(203, -471)
+
+[node name="coin14" parent="." instance=ExtResource("4_tvrc1")]
+position = Vector2(409, -473)
