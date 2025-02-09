@@ -1,11 +1,13 @@
-[gd_scene load_steps=31 format=3 uid="uid://cc6yfxa71ecl5"]
+[gd_scene load_steps=33 format=3 uid="uid://cc6yfxa71ecl5"]
 
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_8pyvh"]
 [ext_resource type="Texture2D" uid="uid://dqxhxieu6loy0" path="res://assets/sprites/world_tileset.png" id="1_ag6ng"]
 [ext_resource type="PackedScene" uid="uid://bfcmxyfps6aqx" path="res://scenes/player.tscn" id="1_pewfk"]
 [ext_resource type="PackedScene" uid="uid://d2gp3lb4jdnp4" path="res://scenes/platform.tscn" id="3_5hfyl"]
 [ext_resource type="PackedScene" uid="uid://c2lje47tybwvc" path="res://scenes/coin.tscn" id="4_tvrc1"]
 [ext_resource type="PackedScene" uid="uid://csmthfu7102pf" path="res://scenes/kilzone.tscn" id="5_1iw26"]
 [ext_resource type="PackedScene" uid="uid://ciw7eqgje80fh" path="res://scenes/slime.tscn" id="6_oyrc6"]
+[ext_resource type="FontFile" uid="uid://cri4blaj4qcvc" path="res://assets/fonts/PixelOperator8.ttf" id="7_xxvth"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljktv"]
 texture = ExtResource("1_ag6ng")
@@ -444,6 +446,22 @@ _data = {
 
 [node name="Game" type="Node2D"]
 
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_8pyvh")
+
+[node name="ScoreLabel" type="Label" parent="GameManager"]
+offset_left = -615.0
+offset_top = -1121.0
+offset_right = -518.0
+offset_bottom = -1091.0
+theme_override_fonts/font = ExtResource("7_xxvth")
+theme_override_font_sizes/font_size = 8
+text = "Congratulation you collected X coins!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_w5vmg")
 format = 2
@@ -633,3 +651,23 @@ position = Vector2(409, -473)
 
 [node name="Slime" parent="." instance=ExtResource("6_oyrc6")]
 position = Vector2(-236, -16)
+
+[node name="Label" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Label"]
+offset_left = -153.0
+offset_top = -86.0
+offset_right = -86.0
+offset_bottom = -63.0
+theme_override_fonts/font = ExtResource("7_xxvth")
+theme_override_font_sizes/font_size = 8
+text = "Let's play!"
+
+[node name="Label2" type="Label" parent="Label"]
+offset_left = 655.0
+offset_top = -549.0
+offset_right = 722.0
+offset_bottom = -526.0
+theme_override_fonts/font = ExtResource("7_xxvth")
+theme_override_font_sizes/font_size = 8
+text = "Jump!"
